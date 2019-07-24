@@ -1,0 +1,33 @@
+{
+  "name": "lib-demo",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "umd": "dist/index.umd.min.js",
+  "authors": {
+    "name": "wuyang",
+    "email": ""
+  },
+  "repository": "/lib-demo",
+  "files": ["dist"],
+  "scripts": {
+    "dev": "umi-lib doc dev",
+    "build": "umi-lib build",
+    "doc:dev": "umi-lib doc dev",
+    "doc:build": "umi-lib doc build",
+    "doc:deploy": "umi-lib doc deploy",
+    "test": "umi-test",
+    "prepublishOnly": "npm run test && npm run build"
+  },
+  "peerDependencies": {
+    "react": "16.x",
+    "prop-types": "^15.6.2"
+  },
+  "devDependencies": {
+    "umi-library": "^1.1.1",
+    "umi-test": "^1.6.4"
+  },
+  "sideEffects": false,
+  "license": "MIT"
+}
