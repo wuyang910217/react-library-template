@@ -2,10 +2,16 @@ export default {
   entry: 'src/index.js',
   cjs: 'rollup',
   esm: 'rollup',
-  umd: true, // 默认没有umd格式的输出
+  umd: {
+    name: 'DemoLib', // 指定库的名称
+    globals: {
+      react: 'React',
+      'prop-types': 'PropTypes',
+    },
+  },
   cssModules: true,
   doc: {
     // themeConfig: { mode: 'dark' },
-    base: '/whiteboard',
+    base: '/lib-template',
   },
 };
